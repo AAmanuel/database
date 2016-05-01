@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		95B04C6D1CD3C99200E69D21 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 95B04C6C1CD3C99200E69D21 /* main.cpp */; };
+		95B04C741CD63F5800E69D21 /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95B04C731CD63F5700E69D21 /* libboost_system.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		95B04C691CD3C99200E69D21 /* 4semestr */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 4semestr; sourceTree = BUILT_PRODUCTS_DIR; };
 		95B04C6C1CD3C99200E69D21 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		95B04C731CD63F5700E69D21 /* libboost_system.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_system.a; path = ../../../../usr/local/Cellar/boost/1.60.0_2/lib/libboost_system.a; sourceTree = "<group>"; };
+		95B04C761CD6464A00E69D21 /* main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95B04C741CD63F5800E69D21 /* libboost_system.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +45,7 @@
 		95B04C601CD3C99200E69D21 = {
 			isa = PBXGroup;
 			children = (
+				95B04C731CD63F5700E69D21 /* libboost_system.a */,
 				95B04C6B1CD3C99200E69D21 /* 4semestr */,
 				95B04C6A1CD3C99200E69D21 /* Products */,
 			);
@@ -58,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				95B04C6C1CD3C99200E69D21 /* main.cpp */,
+				95B04C761CD6464A00E69D21 /* main.h */,
 			);
 			path = 4semestr;
 			sourceTree = "<group>";
@@ -209,6 +215,11 @@
 		95B04C711CD3C99200E69D21 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					/usr/local/Cellar/boost/1.60.0_2/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -216,6 +227,11 @@
 		95B04C721CD3C99200E69D21 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					/usr/local/Cellar/boost/1.60.0_2/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
