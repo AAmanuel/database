@@ -17,8 +17,8 @@ void handle_accept(socket_ptr sock, const error_code & err)
 {
     if ( err) return;
     
-    socket_ptr accsock(new ip::tcp::socket(service));
-    start_accept(accsock);
+    socket_ptr nextsock(new ip::tcp::socket(service));
+    start_accept(nextsock);
 }
 
 void start_accept(socket_ptr sock)

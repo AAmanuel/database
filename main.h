@@ -12,7 +12,7 @@
 using namespace boost::asio;
 using boost::system::error_code;
 
-typedef std::shared_ptr<ip::tcp::socket> socket_ptr;
+typedef boost::shared_ptr<ip::tcp::socket> socket_ptr;
 
 #ifndef main_h
 #define main_h
