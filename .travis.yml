@@ -13,6 +13,7 @@ matrix:
             - libgtest-dev
             - libboost-all-dev
             - cmake
+            - ninja-build
             - g++-5
       env: COMPILER=g++-5
     - os: linux
@@ -27,6 +28,7 @@ matrix:
             - libgtest-dev
             - libboost-all-dev
             - cmake
+            - ninja-build
             - clang-3.6
       env: COMPILER=clang++-3.6
     - os: osx
@@ -36,4 +38,9 @@ matrix:
         - brew update
         - brew install gtest
         - brew install boost
+        - brew install ninja
         - brew outdated cmake || brew upgrade cmake
+
+script:
+  - cmake -G Ninja .
+  - ninja
