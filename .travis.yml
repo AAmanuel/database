@@ -1,0 +1,39 @@
+language: cpp
+
+matrix:
+  include:
+    - os: linux
+      sudo: false
+      compiler: gcc
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - libgtest-dev
+            - libboost-all-dev
+            - cmake
+            - g++-5
+      env: COMPILER=g++-5
+    - os: linux
+      sudo: false
+      compiler: clang
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+            - llvm-toolchain-precise-3.6
+          packages:
+            - libgtest-dev
+            - libboost-all-dev
+            - cmake
+            - clang-3.6
+      env: COMPILER=clang++-3.6
+    - os: osx
+      osx_image: xcode7.3
+      compiler: clang
+      before_install:
+        - brew update
+        - brew install gtest
+        - brew install boost
+        - brew outdated cmake || brew upgrade cmake
