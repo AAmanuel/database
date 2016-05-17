@@ -8,6 +8,6 @@ find_package(Boost COMPONENTS system REQUIRED)
 include_directories(${Boost_INCLUDE_DIR})
 target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES})
 
-enable_testing()
-add_subdirectory(tests)
+#enable_testing()
+#add_subdirectory(tests)
 
