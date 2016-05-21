@@ -1,13 +1,6 @@
-//
-//  main.cpp
-//  4semestr
-//
-//  Created by Анна Амануел on 29.04.16.
-//  Copyright © 2016 AMANUEL. All rights reserved.
-//
-
 #include <boost/bind.hpp>
-#include "main.h"
+#include "server.h"
+#include "storage.h"
 
 io_service service;
 ip::tcp::endpoint ep( ip::tcp::v6(), 1025); // слушаем порт 1025

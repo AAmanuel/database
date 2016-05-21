@@ -1,11 +1,3 @@
-//
-//  main.h
-//  4semestr
-//
-//  Created by Анна Амануел on 01.05.16.
-//  Copyright © 2016 AMANUEL. All rights reserved.
-//
-
 #include <boost/asio.hpp>
 
 //загружаем определения из областей видимости
@@ -14,12 +6,12 @@ using boost::system::error_code;
 
 typedef boost::shared_ptr<ip::tcp::socket> socket_ptr;
 
-#ifndef main_h
-#define main_h
+#ifndef SERVER_H
+#define SERVER_H
 
 void start_accept(socket_ptr sock);
 void handle_accept(const error_code & err);
 
 int main(int argc, const char * argv[]);
 
-#endif /* main_h */
+#endif // SERVER_H
