@@ -11,4 +11,3 @@ target_link_libraries(${PROJECT_NAME}-server ${Boost_LIBRARIES})
 
 #enable_testing()
 #add_subdirectory(tests)
-
